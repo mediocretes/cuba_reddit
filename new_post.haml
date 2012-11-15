@@ -1,1 +1,8 @@
-new post
+New Post
+
+%form{:method => :post, :action => "/posts"}
+  %label Post Title
+  %input{:type => "text", :name => "post[title]"}
+
+  %br
+  %input{:type => "submit", :value => "Post!"}
