@@ -5,8 +5,8 @@ class Post < Cuba
 
 
   Post.define do
-    on get do
-      on "posts" do
+    on "posts" do
+      on get do
         on root do
           res.write "Post List"
         end
@@ -19,17 +19,11 @@ class Post < Cuba
           res.write render("show_post.haml")
         end
       end
-    end
 
-    on post do
-      on "posts" do
+      on post do
         #save your stuff
-
-
         res.redirect "/posts"
       end
     end
-
-
   end
 end
